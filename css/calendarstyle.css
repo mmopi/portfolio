@@ -1,0 +1,156 @@
+
+.calendar * {
+
+  box-sizing: border-box;
+  font-family: 'Do Hyeon', sans-serif;
+
+}
+
+/* 텍스트 지우기 */
+
+.con_txt{
+  height: 0;
+  font-size: 0;
+  color: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.pop_cal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.cal_con{
+   padding-left: 20px; 
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* @learnwithshero  */
+
+.calendar {
+  width: 353px;
+  background-color: white;
+  /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.669),
+    -10px -10px 20px rgba(0, 0, 0, 0.436); */
+    border: 1px solid #d9d9d9;
+    padding: 40px 33px;
+    color: #191919;
+}
+
+.calendar h3{
+  font-size: 20px;
+}
+
+.calendar .content{
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.calendar .month {
+  width: 100%;
+  background-color: #fff;
+  background-image: linear-gradient(
+    /* 90deg,
+    #ff9a8b 0%,
+    #ff6a88 55%,
+    #ff99ac 100% */
+  );
+  justify-content: space-between !important;
+  text-align: center;
+}
+.calendar .month img {
+  width: 8px;
+  cursor: pointer;
+  transition: 0.1s;
+  position: relative;
+  bottom: 10px;
+}
+.month img:hover{
+    opacity: 0.8;
+}
+.month h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.month p {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.797);
+  font-family: cursive;
+}
+/* @learnwithshero  */
+.weekdays {
+  width: 100%;
+  padding: 20px 30px 0;
+}
+.weekdays div {
+  flex:1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.red{
+  color: #FB6767 !important;
+}
+.blue{
+  color:#6C5CD2 !important;
+}
+
+.days {
+  flex-wrap: wrap;
+  padding:10px 30px;
+
+}
+.days div {
+  width: calc(100% / 7);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+  padding: 5px 0;
+  border: 0.5px solid transparent;
+}
+
+.days div:nth-child(7n){
+  color: #FB6767;
+}
+
+.days div:nth-child(6),
+.days div:nth-child(13),
+.days div:nth-child(20),
+.days div:nth-child(27),
+.days div:nth-child(34){
+  color: #6C5CD2;
+}
+
+.days .previous-days,
+.days .next-days {
+    color: rgba(0, 0, 0, 0.349) !important;
+}
+.days .today {
+    background-color: #FB6767;
+    cursor: pointer;
+    color: white !important;
+    border-radius: 10px;
+  transition: 0.2s;
+}
+.days .today:hover {
+  background-color: #FB6767;
+}
+.days div:not(.today):hover{
+    border-radius: 0;
+    border: 0.5px solid black;
+    background-color: rgba(0, 0, 0, 0.215);
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        .tab{
+            width: 600px;
+            margin: 40px auto;
+            display: flex;
+        }
+
+        button{
+            background-color: transparent;
+            border: 0;
+            width: 200px;
+            height: 45px;
+            text-align: center;
+            /* border-bottom: 1px solid #ddd; */
+            border-radius: 10px 10px 0 0;
+            box-shadow:  0 2px 2px rgba(0,0,0,0.1), inset 0px 0px 0px rgba(0,0,0,0);
+            transition: all 1s;
+        
+        }
+
+        button.active{
+            /* border-bottom-color: transparent; */
+            box-shadow: 0 0 0 rgba(0,0,0,0), inset 1px 2px 3px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="tab">
+        <button>#국내</button>
+        <button class="active">#해외</button>
+        <button>#오늘의 인기</button>
+    </div>
+
+    <script>
+let btn = document.querySelectorAll('button');
+
+for(let i = 0; i<btn.length; i++){
+
+    btn[i].addEventListener('click',function(){
+        for(let m = 0; m<btn.length;m++){
+            btn[m].classList.remove('active');
+        }
+        btn[i].classList.add('active');
+    })
+    
+}
+
+
+    </script>
+</body>
+</html>
